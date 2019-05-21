@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+  src: url('../fonts/circe.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+  src: url('../fonts/circebold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IntroScript';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  
+  src: url('../fonts/introscriptrh2base.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+  src: url('../fonts/playfairdisplaybold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+
+  src: url('../fonts/playfairdisplaybolditalic.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Circe', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  
+  color: @black;
+  background-color: @color-second--bg;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+}
