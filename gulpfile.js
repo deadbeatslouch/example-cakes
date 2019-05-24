@@ -106,7 +106,7 @@ gulp.task("serve", function() {
 	gulp.watch("img/**/*.{jpg,jpeg,png,svg}", 
 		gulp.series("images")).on("change", server.reload);
 
-	gulp.watch(".html", 
+	gulp.watch("*.html", 
 		gulp.series("html")).on("change", server.reload);
 
 	gulp.watch([ "fonts/**/*.woff2", "js/**" ],
