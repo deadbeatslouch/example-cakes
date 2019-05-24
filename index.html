@@ -2,18 +2,23 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Торты на заказ</title>
+	<link rel="preload" href="fonts/circe.woff2" as="font">
+	<link rel="preload" href="fonts/introscriptrh2base.woff2" as="font">
+	<link rel="preload" href="fonts/playfairdisplaybold.woff2" as="font">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
 	<header class="page-header">
-		<div class="pahe-header__wrapper">
+		<div class="page-header__wrapper">
+			<a class="page-header__logo">Cakes</a>
 			<nav class="main-nav main-nav--closed main-nav--nojs">
 				<button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 				<ul class="main-nav__list">
-					<li class="main-nav__item main-nav__item--logo">Cakes</li>
 					<li class="main-nav__item"><a href="#products">Наши торты</a></li>
 					<li class="main-nav__item"><a href="#custom-order">Индивидуальный заказ</a></li>
 					<li class="main-nav__item"><a href="#reviews">Отзывы</a></li>
@@ -24,7 +29,7 @@
 			</nav>
 		</div>
 	</header>
-	<main class="index-main">
+	<main>
 		<article class="description">
 			<div class="description__wrapper">
 				<h1 class="description__title">Торты  на заказ</h1>
@@ -440,7 +445,7 @@
 					</p>
 					<p class="contacts__form-item">
 						<label for="form-query" class="visually-hidden"></label>
-						<textarea id="form-query" class="contacts__form-input contacts__form-input--area" name="query" type="text" rows="6" placeholder="Ваш вопрос"></textarea>
+						<textarea id="form-query" class="contacts__form-input contacts__form-input--area" name="query" rows="6" placeholder="Ваш вопрос"></textarea>
 					</p>
 					<button class="contacts__button button" type="submit">Отправить </button>
 				</form>
