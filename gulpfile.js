@@ -16,6 +16,7 @@ var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var server = require("browser-sync").create();
 
 gulp.task("style", function() {
 	return gulp.src("less/style.less")
@@ -28,11 +29,12 @@ gulp.task("style", function() {
 	.pipe(mincss())
 	.pipe(rename("style.min.css"))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest("build/css"));
+	.pipe(gulp.dest("build/css"))
+	.pipe(server.reload({stream: true}));
 });
 
 gulp.task("images", function() {
-	return gulp.src("img/**/*.{jpg,png,svg}")
+	return gulp.src("img/**/*.{jpg,jpeg,png,svg}")
 	.pipe(imagemin([
 		imagemin.optipng({
       optimizationLevel: 3
@@ -92,3 +94,23 @@ gulp.task("build", gulp.series(
 	"html",
 	"copy"
 ));
+
+gulp.task("serve", function() {
+	server.init({
+		server:"build"
+	})
+
+	gulp.watch("less/**/*.less", 
+		gulp.series("style"));
+
+	gulp.watch("img/**/*.{jpg,jpeg,png,svg}", 
+		gulp.series("images")).on("change", server.reload);
+
+	gulp.watch(".html", 
+		gulp.series("html")).on("change", server.reload);
+
+	gulp.watch([ "fonts/**/*.woff2", "js/**" ],
+		gulp.series("copy")).on("change", server.reload);
+});
+
+gulp.task("dev", gulp.series("build", "serve"));
