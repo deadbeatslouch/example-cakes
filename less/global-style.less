@@ -59,7 +59,7 @@ body {
   background-color: @color-second--bg;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   overflow: hidden;
