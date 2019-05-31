@@ -64,11 +64,6 @@
 		  &:active::after {
 		    background-color: fade(@black, 30%);
 		  }
-
-			.main-nav__list {
-				position: relative;
-				top: 0;
-			}
 		}
 	}	
 	/* .main-nav--nojs */
@@ -104,6 +99,10 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+
+	  position: absolute;
+    width: 100%;
+    background-color: #e7e7e7;
 	}
 	/* .main-nav__item */
 	&__item {
