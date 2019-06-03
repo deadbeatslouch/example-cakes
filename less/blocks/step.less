@@ -1,0 +1,124 @@
+.step {
+  background-color: @white;
+  /* .step__wrapper */
+  &__wrapper {
+    position: relative;
+    width: 280px;
+    margin: 0 auto;
+    padding-bottom: 26px;
+  }
+  /* .step__title */
+  &__title {
+    font-family: "PlayfairDisplay", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    color: @color-main;
+    padding: 5px 20px 15px;
+    margin: 0;
+
+    &--fillingout {
+      padding-bottom: 22px;
+    }
+  }
+  /* .step__capital */
+  &__capital {
+    font-size: 30px;
+  }
+  /* .step__controls */
+  &__controls {
+  }
+  /* .step__number */
+  &__number {
+  }
+  /* .step__list */
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* .step__item */
+  &__item {
+    padding: 0 20px;
+    display: none;
+
+    &--close {
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+  /* .step__image */
+  &__image {    
+    margin: 0 auto 38px;
+    width: 240px;
+    height: 113px;
+
+    img {
+      width: 240px;
+      height: 113px;
+      object-fit: cover;
+    }
+    /* .step__image--size */
+    &--size {
+      height: 202px;
+
+      img {
+        height: 202px;
+        object-fit: none;
+      }
+    }
+    /* .step__image--fillingout */
+    &--fillingout {
+      width: 169px;
+      height: 196px;
+      box-shadow: 0px 2px 5px fade(@color-main--dark, 10%);
+
+      img {
+        width: 169px;
+        height: 196px;
+      }
+    }
+  }
+  /* .step__name */
+  &__name {
+    font-size: 16px;
+    color: @gray--darken;
+    /* .step__name--fillingout */
+    &--fillingout {
+      display: block;
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 6px;
+    }
+  }
+  /* .step__description */
+  &__description {
+    margin: 5px 0 14px;
+    color: @gray--darken;
+
+    &--size {
+      margin: 0 0 29px;
+      text-align: center;
+    }
+  }
+  /* .step__price */
+  &__price {
+    display: block;
+    font-size: 18px;
+    font-family: "PlayfairDisplay", sans-serif;
+    font-weight: bold;
+    color: @gray--darken;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &--fillingout {
+      margin-bottom: 28px;
+    }
+  }
+  /* .step__button */
+  &__button {
+    .button();
+  }
+}

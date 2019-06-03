@@ -1,0 +1,84 @@
+.products {
+  margin-bottom: 50px;
+  /* .products__wrapper */
+  &__wrapper {
+    .container();
+  }
+  /* .products__title */
+  &__title {
+    .title();
+
+    margin-bottom: 30px;
+  }
+  /* .products__list */
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* .products__item */
+  &__item {
+    position: relative;
+    height: 120px;
+    background-color: @white;
+    margin: 0 auto 10px;
+    /* .products__item--classic */
+    &--classic {
+    }
+    /* .products__item--mousse */
+    &--mousse {
+    }
+    /* .products__item--bridal */
+    &--bridal {
+    }
+    /* .products__item--man */
+    &--man {
+    }
+    /* .products__item--woman */
+    &--woman {
+    }
+    /* .products__item--kids */
+    &--kids {
+      background-color: #f4f2f5;
+    }
+  }
+  /* .products__name */
+  &__name {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+
+    color: @color-second;
+  }
+  /* .products__number */
+  &__number {
+    position: absolute;
+    top: 30px;
+    left: 13px;
+
+    font-size: 12px;
+    color: fade(@color-second, 70%);
+  }
+  /* .products__link */
+  &__link {
+    margin: 0 auto;
+    display: block;
+    width: 280px;      
+
+    &:hover,
+    &:focus {
+      opacity: 0.4;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+
+    img {
+      width: 280px;
+      height: 120px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* .controls--filling */
+  &--filling {
+    top: 180px;
+  }
+  /* .controls--size */
+  &--size {
+    top: 266px;
+  }
+  /* .controls--fillingout */
+  &--fillingout {
+    top: 270px;
+  }
+  /* .controls__item */
+  &__item {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 2px;
+    vertical-align: middle;
+
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: @gray--light;
+    /* .controls__item--active */
+    &--active {
+      width: 8px;
+      height: 8px;
+      background-color: @color-main;
+    }
+    /* .controls__item--next */
+    &--next {
+      width: 4px;
+      height: 4px;
+    }
+  }
+}
