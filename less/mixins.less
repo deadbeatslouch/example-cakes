@@ -1,58 +1,68 @@
 .title() {
-	font-family: "PlayfairDisplay", serif;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 33px;
+  font-family: "PlayfairDisplay", serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
 
-	margin: 0;
-	text-align: center;
+  margin: 0;
+  text-align: center;
 
-	color: @color-second;
+  color: @color-second;
 }
 
 .subtitle() {
-	font-family: "IntroScript", sans-serif;
-	font-size: 22px;
-	line-height: 25px;
+  font-family: "IntroScript", sans-serif;
+  font-size: 22px;
+  line-height: 25px;
 
-	margin: 0;
-	text-align: center;
+  margin: 0;
+  text-align: center;
 
-	color: @color-second--intro;
+  color: @color-second--intro;
 }
 
 .container() {
-	width: auto;
-	padding: 0 20px;
+  width: auto;
+  padding: 0 20px;
 
-	@media (min-width: @screen-md) {
-		width: 768px;
-		padding: 0 20px;
-	}
+  @media (min-width: @screen-md) {
+    width: 768px;
+    padding: 0 20px;
+  }
 
-	@media(min-width: @screen-lg) {
-		width: 1366px;
-		padding: 0 73px;
-	}
+  @media(min-width: @screen-lg) {
+    width: 1366px;
+    padding: 0 73px;
+  }
 }
 
 .button() {
-	font-family: "Circe", "Arial", sans-serif;
-	font-size: 13px;
-	line-height: 17px;
+  font-family: "Circe", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
 
-	display: block;
-	
-	width: 180px;
-	padding: 19px 26px 15px;
-	margin: 0 auto;
+  display: block;
+  
+  width: 180px;
+  padding: 19px 26px 15px;
+  margin: 0 auto;
 
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
 
-	color: @white;
-	border: none;
-	border-radius: 46px;
-	background-color: @color-main;
+  color: @white;
+  border: none;
+  border-radius: 46px;
+  background-color: @color-main;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 5px 8px fade(@color-main--light, 30%);
+    outline: none;
+  }
+
+  &:active {
+    background-color: darken(@color-main, 5%);
+  }
 }
