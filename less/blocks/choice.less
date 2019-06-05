@@ -6,6 +6,7 @@
 
     width: 280px;
     margin: 0 auto;
+    padding-top: 5px;
     padding-bottom: 26px;
   }
   /* .choice__title */
@@ -15,8 +16,8 @@
     font-size: 22px;
     line-height: 32px;
     color: @color-second;
-    padding: 5px;
-    margin: 0;
+    padding: 0 5px;
+    margin: 0 0 5px;
   }
   /* .choice__form */
   &__form {
@@ -25,12 +26,16 @@
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px;
   }
   /* .choice__item */
   &__item {
     display: flex;
     flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;      
+    }
 
     label {
       align-self: center;
@@ -46,13 +51,11 @@
       border-radius: 15px;
       text-align: center;
       padding: 5px 15px;
-      margin-bottom: 5px;
       color: @color-second;
     }
   }
   /* .choice__button */
   &__button {
     .button();
-    margin-top: 30px;
   }
 }
