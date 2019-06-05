@@ -1,8 +1,10 @@
 .products {
-  margin-bottom: 50px;
   /* .products__wrapper */
   &__wrapper {
     .container();
+    
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   /* .products__title */
   &__title {
@@ -21,7 +23,9 @@
     position: relative;
     height: 120px;
     background-color: @white;
-    margin: 0 auto 10px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
     /* .products__item--classic */
     &--classic {
     }
