@@ -112,17 +112,6 @@
               </picture>
             </a>
           </li>
-          <!-- <li class="products__item products__item--kids">
-            <span class="products__name"></span>
-            <span class="products__number"></span>
-            <a class="products__link" href="#">
-              <picture>
-                <source type="image/webp" srcset="">
-                
-                <img src="" alt="">
-              </picture>
-            </a>
-          </li> -->
         </ul>
       </div>
     </section>
@@ -137,14 +126,14 @@
             <h3 class="step__title">
               <span class="step__capital">01 </span>Выберите начинку
             </h3>
-            <div class="step__controls controls controls--filling">
+            <div class="controls controls--filling">
               <i class="controls__item controls__item--active" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item controls__item--next" tabindex="0"></i>
             </div>
-            <p class="step__number number number--filling">
+            <p class="number number--filling">
               <span class="number__current">1</span>/<span class="number__all">12</span>
             </p>
             <ul class="step__list">
@@ -160,18 +149,6 @@
                 <p class="step__description">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
                 <span class="step__price">1000 руб/кг</span>
               </li>
-              <!-- <li class="step__item">
-                <div class="step__image">
-                  <picture>
-                    <source type="image/webp" srcset="">
-                    
-                    <img src="" alt="">
-                  </picture>
-                </div>
-                <b class="step__name"></b>
-                <p class="step__description"></p>
-                <span class="step__price"></span>
-              </li> -->
             </ul>
             <button class="step__button button" type="button">Выбрать</button>
           </div>
@@ -182,13 +159,13 @@
             <h3 class="step__title">
               <span class="step__capital">02 </span>Размер
             </h3>
-            <div class="step__controls controls controls--size">
+            <div class="controls controls--size">
               <i class="controls__item controls__item--active" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item" tabindex="0"></i>
             </div>
-            <ul class="step__list">
+            <ul class="step__list step__list--size">
               <li class="step__item step__item--show">
                 <div class="step__image step__image--size">
                   <picture>
@@ -240,14 +217,14 @@
               <h3 class="step__title step__title--fillingout">
                 <span class="step__capital">03 </span>Оформление
               </h3>
-              <div class="step__controls controls controls--fillingout">
+              <div class="controls controls--fillingout">
                 <i class="controls__item controls__item--active" tabindex="0"></i>
                 <i class="controls__item" tabindex="0"></i>
                 <i class="controls__item" tabindex="0"></i>
                 <i class="controls__item" tabindex="0"></i>
                 <i class="controls__item controls__item--next" tabindex="0"></i>
               </div>
-              <p class="step__number number number--fillingout">
+              <p class="number number--fillingout">
                 <span class="number__current">1</span>/<span class="number__all">35</span>
               </p>
               <ul class="step__list">
@@ -273,17 +250,6 @@
                   <b class="step__name step__name--fillingout">Ягодное ассорти</b>
                   <span class="step__price step__price--fillingout">700 руб/кг</span>
                 </li>
-                <!-- <li class="step__item step__item--close">
-                  <div class="step__image step__image--fillingout">
-                    <picture>
-                      <source type="image/webp" srcset="">
-                      
-                      <img src="" alt="">
-                    </picture>
-                  </div>
-                  <b class="step__name step__name--fillingout"></b>
-                  <span class="step__price step__price--fillingout"></span>
-                </li> -->
               </ul>
               <button class="step__button button" type="button">Выбрать</button>
             </div>
@@ -319,8 +285,8 @@
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
         <ul class="reviews__list">
-          <li class="reviews__item">
-            <blockquote class="__reviews__quote">
+          <li class="reviews__item reviews__item--active">
+            <blockquote class="reviews__quote">
               <div class="reviews__photo">
                 <picture>
                   <source type="image/webp" srcset="img/comment-1-mobile.webp">
@@ -332,29 +298,15 @@
               <p class="reviews__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)<a href="" class="reviews__full">Развернуть</a></p>
             </blockquote>
           </li>
-          <!-- <li class="reviews__item">
-            <blockquote class="__reviews__quote">
-              <div class="reviews__photo">
-                <picture>
-                  <source type="image/webp" srcset="">
-                  
-                  <img src="" alt="">
-                </picture>
-              </div>
-              <cite class="reviews__author-name"></cite>
-              <span class="reviews__author-descr"></span>
-              <p class="reviews__text"><a href="" class="reviews__full"></a></p>
-            </blockquote>
-          </li> -->
         </ul>
-        <div class="reviews__controls controls controls--reviews">
-          <i class="controls__item controls__item--active"></i>
-          <i class="controls__item"></i>
-          <i class="controls__item"></i>
-          <i class="controls__item"></i>
-          <i class="controls__item controls__item--next"></i>
+        <div class="controls controls--reviews">
+          <i class="controls__item controls__item--reviews controls__item--active"></i>
+          <i class="controls__item controls__item--reviews"></i>
+          <i class="controls__item controls__item--reviews"></i>
+          <i class="controls__item controls__item--reviews"></i>
+          <i class="controls__item controls__item--reviews controls__item--next"></i>
         </div>
-        <p class="step__number number number--reviews">
+        <p class="number number--reviews">
           <span class="number__current">1</span>/<span class="number__all">26</span>
         </p>
       </div>
@@ -392,17 +344,17 @@
       </blockquote>
     </section>
 
-    <section class="reviews">
-      <div class="reviews__wrapper">
-        <h2 class="reviews__title">Наши преимущества</h2>
-        <p class="reviews__subtitle">Почему нас выбирают?</p>
-        <div class="reviews__content-wrapper">
-          <ul class="reviews__list">
-            <li class="reviews__item">
-              <p class="reviews__item-text"><span class="reviews__line">Без искусственных добавок</span><br>Работаем  с натуральными ингредиентами и свежими продуктами</p>
+    <section class="features">
+      <div class="features__wrapper">
+        <h2 class="features__title">Наши преимущества</h2>
+        <p class="features__subtitle">Почему нас выбирают?</p>
+        <div class="features__content-wrapper">
+          <ul class="features__list">
+            <li class="features__item">
+              <p class="features__item-text"><span class="features__line">Без искусственных добавок</span><br>Работаем  с натуральными ингредиентами и свежими продуктами</p>
             </li>
-            <li class="reviews__item">
-              <p class="reviews__item-text"><span class="reviews__line">Свежий торт в день торжества</span><br>Торты изготавливаются в течение суток до отправки</p>
+            <li class="features__item">
+              <p class="features__item-text"><span class="features__line">Свежий торт в день торжества</span><br>Торты изготавливаются в течение суток до отправки</p>
             </li>
           </ul>
         </div>
