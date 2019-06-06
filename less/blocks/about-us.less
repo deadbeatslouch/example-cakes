@@ -1,0 +1,88 @@
+.about-us {
+	/* .about-us__wrapper */
+	&__wrapper {
+		.container();
+		
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 45px;
+	}
+	/* .about-us__title */
+	&__title {
+		.title();
+		
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	/* .about-us__photo */
+	&__photo {
+		width: 155px;
+		height: 155px;
+
+    img {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      object-fit: none;
+      object-position: 34% 20%;
+    }
+	}
+	/* .about-us__social */
+	&__social {
+		margin-left: 35px;
+	}
+	/* .about-us__content-wrapper */
+	&__content-wrapper {
+		padding-top: 15px;
+	}
+	/* .about-us__subtitle */
+	&__subtitle {
+		.subtitle();
+
+		margin-bottom: 7px;
+		color: @color-second--intro;
+		text-align: left;
+	}
+	/* .about-us__tag-line */
+	&__tag-line {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: bold;
+		color: @color-second;
+	}
+	/* .about-us__text */
+	&__text {
+		margin: 0 0 12px;
+		color: @color-second;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	/* .about-us__quote */
+	&__quote {
+		padding-top: 68px;
+		margin: 0;
+		background-image: url("/img/icon-quotes.svg");
+		background-position: 50% 35px;
+		background-repeat: no-repeat;
+	}
+	/* .about-us__quote-text */
+	&__quote-text {
+		margin: 0 0 19px;
+		text-align: center;
+		font-family: "PlayfairDisplay", sans-serif;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+		color: @color-second;
+	}
+	/* .about-us__sign */
+	&__sign {
+		img {
+	    margin: 0 auto;
+	    display: block;
+		}
+	}
+}

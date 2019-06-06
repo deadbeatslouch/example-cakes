@@ -1,0 +1,70 @@
+.contacts {
+	/* .contacts__wrapper */
+	&__wrapper {
+		.container();
+
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+	/* .contacts__title */
+	&__title {
+		.title();
+
+		margin-bottom: 6px;
+	}
+	/* .contacts__form */
+	&__form {
+		margin-bottom: 28px;
+	}
+	/* .contacts__subtitle */
+	&__subtitle {
+		.subtitle();
+
+		color: @color-second--intro;
+		text-align: left;
+		margin-bottom: 7px;
+	}
+	/* .contacts__description */
+	&__description {
+		margin: 0 0 7px;
+	}
+	/* .contacts__form-item */
+	&__form-item {
+		margin: 0 0 10px;
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+	/* .contacts__form-input */
+	&__form-input {
+		width: 100%;
+		border: none;
+		border-radius: 2px;
+		padding: 15px 10px;
+
+		&::-webkit-input-placeholder {
+			opacity: 0.2;
+		}
+		/* .contacts__form-input--area */
+		&--area {
+			margin-bottom: 0;
+		}
+	}
+	/* .contacts__button */
+	&__button {
+		.button();
+	}
+	/* .contacts__content-wrapper */
+	&__content-wrapper {
+	}
+	/* .contacts__item */
+	&__item {
+		&:not(:last-of-type) {
+			margin: 0 0 16px;
+		}
+		&:last-of-type {
+			margin: 0 0 10px;
+		}
+	}
+}

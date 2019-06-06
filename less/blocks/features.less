@@ -1,0 +1,79 @@
+.features {
+	background-image: url(/img/cake-bottom-mobile.png);
+	background-repeat: no-repeat;
+	background-position: 50% 117%; 
+	/* .features__wrapper */
+	&__wrapper {
+
+		padding-top: 45px;
+	}
+	/* .features__title */
+	&__title {
+		.title();
+
+		margin-bottom: 5px;
+
+		&--care {
+			text-align: left;
+		}
+	}
+	/* .features__subtitle */
+	&__subtitle {
+		.subtitle();
+		
+		margin-bottom: 13px;
+		color: @color-second--intro;
+
+		&--care {
+			text-align: left;
+			margin-bottom: 0;
+		}
+	}
+	/* .features__container */
+	&__container {
+		.container();
+
+		padding-top: 85px;
+		padding-bottom: 14px;
+		background-color: @white;
+		background-image: url("/img/icon-natural.svg"),
+											url("/img/icon-cake.png");
+		background-size: 61px 61px, 84px 50px;
+		background-repeat: no-repeat, no-repeat;
+		background-position: 50% 11px, 50% 153px;
+	}
+	/* .features__list */
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	/* .features__item */
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 72px;
+		}
+	}
+	/* .features__text */
+	&__text {
+		text-align: center;
+		margin: 0;
+
+		&--care {
+			text-align: left;
+		}
+	}
+	/* .features__line */
+	&__line {
+		font-size: 16px;
+		line-height: 27px;
+		font-weight: bold;
+	}
+	/* .features__care-container */
+	&__care-container {
+		.container();
+
+		padding-top: 38px;
+		padding-bottom: 170px;
+	}
+}
