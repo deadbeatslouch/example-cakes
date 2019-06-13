@@ -41,9 +41,18 @@
   }
   /* .number--reviews */
   &--reviews {
-    top: 250px;
-    right: 20px;
     color: fade(@color-main, 70%);
+
+    @media @screen-sm-only {
+      top: 250px;
+      right: 20px;      
+    }
+
+    @media (min-width: @screen-md) {
+      font-size: 12px;
+      bottom: 7px;
+      right: 132px;
+    }
   }
   /* .number__current */
   &__current {

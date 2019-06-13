@@ -1,4 +1,9 @@
 .reviews {
+  @media (min-width: @screen-md) {
+    background-image: url("/img/bg-pennant-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center -9px;
+  }
   /* .reviews__wrapper */
   &__wrapper {
     .container();
@@ -6,12 +11,22 @@
     position: relative;
     padding-top: 45px;
     padding-bottom: 25px;
+
+    @media (min-width: @screen-md) {
+      width: 676px;
+      padding: 42px 130px 25px;
+      margin: 0 auto;
+    }
   }
   /* .reviews__title */
   &__title {
     .title();
 
     margin-bottom: 15px;
+
+    @media (min-width: @screen-md) {
+      margin-bottom: 24px;
+    }
   }
   /* .reviews__list */
   &__list {
@@ -30,6 +45,10 @@
   /* .reviews__quote */
   &__quote {
     margin: 0;
+
+    @media (min-width: @screen-md) {
+      display: flex;
+    }
   }
   /* .reviews__photo */
   &__photo {
@@ -37,37 +56,77 @@
     width: 58px;
     height: 58px;
 
+    @media (min-width: @screen-md) {
+      margin: 0 25px 0 5px;
+      width: 107px;
+      height: 107px;
+    }
+
     img {
       width: 58px;
       height: 58px;
       border-radius: 50%;
       object-fit: none;
       object-position: 50% 20%;
+
+      @media (min-width: @screen-md) {
+        width: 107px;
+        height: 107px;
+      }
     }
+  }
+  /* reviews__quote-wrapper */
+  &__quote-wrapper {
+    @media (min-width: @screen-md) {
+      width: 276px;
+    }    
   }
   /* .reviews__author-name */
   &__author-name {
     display: block;
-    text-align: center;
     color: @color-second;
     font-style: normal;
     font-weight: bold;
-    margin-bottom: 7px;
+
+    @media @screen-sm-only {
+      text-align: center;
+      margin-bottom: 7px;      
+    }
+
+    @media (min-width: @screen-md) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 9px;
+    }
   }
   /* .reviews__author-descr */
   &__author-descr {
     font-size: 12px;
     font-weight: normal;
     text-transform: lowercase;
+
+    @media (min-width: @screen-md) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   /* .reviews__text */
   &__text {
-    text-align: center;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 0 22px;
     margin: 0;
     color: @color-second;
+
+    @media @screen-sm-only {
+      text-align: center;    
+      font-size: 12px;
+      line-height: 15px;
+      padding: 0 22px;
+    }
+
+    @media (min-width: @screen-md) {
+      font-size: 14px;
+      line-height: 17px;
+      padding-right: 22px;
+    }
   }
   /* .reviews__full */
   &__full {
