@@ -58,6 +58,7 @@
                 <source media="(min-width: 768px)" srcset="img/cake-1-classic-tablet.jpg">
                 <img src="img/cake-1-classic-mobile.jpg" width="280" height="120" alt="Классические торты">
               </picture>
+              <span class="products__full">Смотреть</span>
             </a>
           </li>
           <li class="products__item products__item--mousse">
@@ -146,21 +147,29 @@
               <i class="controls__item" tabindex="0"></i>
               <i class="controls__item controls__item--next" tabindex="0"></i>
             </div>
+            <div class="navigation">
+              <i class="navigation__item navigation__item--prev" tabindex="0"></i>
+              <i class="navigation__item navigation__item--next" tabindex="0"></i>
+            </div>
             <p class="number number--filling">
               <span class="number__current">1</span>/<span class="number__all">12</span>
             </p>
             <ul class="step__list">
-              <li class="step__item step__item--show">
-                <div class="step__image">
+              <li class="step__item step__item--filling step__item--show">
+                <div class="step__image step__image--filling">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/filling-chocolate-tablet.webp">
                     <source type="image/webp" srcset="img/filling-chocolate-mobile.webp">
-                  
+                    
+                    <source media="(min-width: 768px)" srcset="img/filling-chocolate-tablet.jpg">
                     <img src="img/filling-chocolate-mobile.jpg" width="240" height="113" alt="Шоколадный ганаш">
                   </picture>
                 </div>
-                <b class="step__name">Шоколадный ганаш</b>
-                <p class="step__description">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
-                <span class="step__price">1000 руб/кг</span>
+                <div class="step__info">
+                  <b class="step__name">Шоколадный ганаш</b>
+                  <p class="step__description">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                  <span class="step__price">1000 руб/кг</span>
+                </div>
               </li>
             </ul>
             <button class="step__button button" type="button">Выбрать</button>
@@ -169,7 +178,7 @@
 
         <section class="custom-order__step step">
           <div class="step__wrapper">
-            <h3 class="step__title">
+            <h3 class="step__title step__title--size">
               <span class="step__capital">02 </span>Размер
             </h3>
             <div class="controls controls--size">
@@ -179,54 +188,62 @@
               <i class="controls__item" tabindex="0"></i>
             </div>
             <ul class="step__list step__list--size">
-              <li class="step__item step__item--show">
+              <li class="step__item step-item--size step__item--show">
                 <div class="step__image step__image--size">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/size-1-tablet.webp">
                     <source type="image/webp" srcset="img/size-1-mobile-desktop.webp">
                     
+                    <source media="(min-width: 768px)" srcset="img/size-1-tablet.png">
                     <img src="img/size-1-mobile-desktop.png" width="110" height="110" alt="Торт 1 кг">
                   </picture>
                 </div>
                 <p class="step__description step__description--size">17-18 см <br>(1 кг – 6 персон)</p>
               </li>
-              <li class="step__item">
+              <li class="step__item step__item--size">
                 <div class="step__image step__image--size">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/size-2-tablet.webp">
                     <source type="image/webp" srcset="img/size-2-mobile-desktop.webp">
                     
+                    <source media="(min-width: 768px)" srcset="img/size-2-tablet.png">
                     <img src="img/size-2-mobile-desktop.png" width="154" height="154" alt="Торт 2 кг">
                   </picture>
                 </div>
                 <p class="step__description step__description--size">23-24 см <br>(10–12 персон)</p>
               </li>
-              <li class="step__item">
+              <li class="step__item step__item--size">
                 <div class="step__image step__image--size">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/size-3-tablet.webp">
                     <source type="image/webp" srcset="img/size-3-mobile-desktop.webp">
                     
+                    <source media="(min-width: 768px)" srcset="img/size-3-tablet.png">
                     <img src="img/size-3-mobile-desktop.png" width="173" height="174" alt="Торт 5 кг">
                   </picture>
                 </div>
                 <p class="step__description step__description--size">Два яруса 25 и 20 см <br>(15–20 персон)</p>
               </li>
-              <li class="step__item">
+              <li class="step__item step__item--size">
                 <div class="step__image step__image--size">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/size-4-tablet.webp">
                     <source type="image/webp" srcset="img/size-4-mobile-desktop.webp">
                     
+                    <source media="(min-width: 768px)" srcset="img/size-4-tablet.png">
                     <img src="img/size-4-mobile-desktop.png" width="200" height="202" alt="Торт 8 кг">
                   </picture>
                 </div>
                 <p class="step__description step__description--size">Три яруса 30,25 и 18 см <br>(25–30 персон)</p>
               </li>
             </ul>
-            <button class="step__button button" type="button">Выбрать</button>
+            <button class="step__button step__button--size button" type="button">Выбрать</button>
           </div>
         </section>
         
         <div class="custom-order__container">
-          <section class="step">
-            <div class="step__wrapper">
+          <section class="step step--fillingout">
+            <div class="step__wrapper step__wrapper--fillingout">
               <h3 class="step__title step__title--fillingout">
                 <span class="step__capital">03 </span>Оформление
               </h3>
@@ -237,26 +254,34 @@
                 <i class="controls__item" tabindex="0"></i>
                 <i class="controls__item controls__item--next" tabindex="0"></i>
               </div>
+              <div class="navigation">
+                <i class="navigation__item navigation__item--fillingout navigation__item--prev" tabindex="0"></i>
+                <i class="navigation__item navigation__item--fillingout navigation__item--next" tabindex="0"></i>
+              </div>
               <p class="number number--fillingout">
                 <span class="number__current">1</span>/<span class="number__all">35</span>
               </p>
-              <ul class="step__list">
-                <li class="step__item step__item--show">
+              <ul class="step__list step__list--fillingout">
+                <li class="step__item step__item--fillingout step__item--show">
                   <div class="step__image step__image--fillingout">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/fillingout-1-marshmallow-tablet.webp">
                       <source type="image/webp" srcset="img/fillingout-1-marshmallow-mobile.webp">
                       
+                      <source media="(min-width: 768px)" srcset="img/fillingout-1-marshmallow-tablet.jpg">
                       <img src="img/fillingout-1-marshmallow-mobile.jpg" width="169" height="196" alt="Оформление маршмэллоу">
                     </picture>
                   </div>
                   <b class="step__name step__name--fillingout">Маршмэллоу</b>
                   <span class="step__price step__price--fillingout">600 руб/кг</span>
                 </li>
-                <li class="step__item">
+                <li class="step__item step__item--fillingout">
                   <div class="step__image step__image--fillingout">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/fillingout-2-berry-tablet.webp">
                       <source type="image/webp" srcset="img/fillingout-2-berry-mobile.webp">
                       
+                      <source media="(min-width: 768px)" srcset="img/fillingout-2-berry-tablet.jpg">
                       <img src="img/fillingout-2-berry-mobile.jpg" width="170" height="228" alt="Оформление ягодное ассорти">
                     </picture>
                   </div>
@@ -264,7 +289,7 @@
                   <span class="step__price step__price--fillingout">700 руб/кг</span>
                 </li>
               </ul>
-              <button class="step__button button" type="button">Выбрать</button>
+              <button class="step__button step__button--fillingout button" type="button">Выбрать</button>
             </div>
           </section>
 
