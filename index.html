@@ -327,13 +327,17 @@
             <blockquote class="reviews__quote">
               <div class="reviews__photo">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/comment-1-tablet.webp">
                   <source type="image/webp" srcset="img/comment-1-mobile.webp">
                   
+                  <source media="(min-width: 768px)" srcset="img/comment-1-tablet.jpg">
                   <img src="img/comment-1-mobile.jpg" width="111" height="111" alt="Отзыв Марии">
                 </picture>
               </div>
-              <cite class="reviews__author-name">Мария<br><span class="reviews__author-descr">Юрист, 33 года</span></cite>
-              <p class="reviews__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)<a href="" class="reviews__full">Развернуть</a></p>
+              <div class="reviews__quote-wrapper">
+                <cite class="reviews__author-name">Мария<br><span class="reviews__author-descr">Юрист, 33 года</span></cite>
+                <p class="reviews__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:) <a href="" class="reviews__full">Развернуть</a></p>
+              </div>
             </blockquote>
           </li>
         </ul>
@@ -343,6 +347,10 @@
           <i class="controls__item controls__item--reviews"></i>
           <i class="controls__item controls__item--reviews"></i>
           <i class="controls__item controls__item--reviews controls__item--next"></i>
+        </div>
+        <div class="navigation">
+          <i class="navigation__item navigation__item--reviews navigation__item--prev" tabindex="0"></i>
+          <i class="navigation__item navigation__item--reviews navigation__item--next" tabindex="0"></i>
         </div>
         <p class="number number--reviews">
           <span class="number__current">1</span>/<span class="number__all">26</span>
