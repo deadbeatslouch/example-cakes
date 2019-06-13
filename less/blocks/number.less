@@ -5,16 +5,39 @@
 
   font-size: 12px;
   color: @white;
+
+  @media (min-width: @screen-md) {
+    font-size: 11px;
+    line-height: 15px;
+    color: fade(@color-second, 70%);
+  }
   /* .number--filling */
   &--filling {
-    top: 144px;
-    right: 28px;
+
+    @media @screen-sm-only {
+      top: 144px;
+      right: 28px;      
+    }
+
+    @media (min-width: @screen-md) {
+      bottom: 55px;
+      right: 45px;
+    }
   }
   /* .number--fillingout */
   &--fillingout {
-    top: 250px;
-    right: 62px;
-    color: @gray--darken;
+    color: fade(@gray--darken, 70%);
+
+    @media @screen-sm-only {
+      top: 250px;
+      right: 62px;
+    }
+
+    @media (min-width: @screen-md) {
+      right: 6px;
+      bottom: 20px;
+      font-size: 12px;
+    }
   }
   /* .number--reviews */
   &--reviews {

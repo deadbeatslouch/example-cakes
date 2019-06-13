@@ -4,10 +4,19 @@
   &__wrapper {
     .container();
 
-    width: 280px;
     margin: 0 auto;
-    padding-top: 5px;
-    padding-bottom: 26px;
+
+    @media @screen-sm-only {
+      width: 280px;
+      padding-top: 5px;
+      padding-bottom: 26px;
+    }
+
+    @media (min-width: @screen-md) {
+      width: 676px;
+      padding-top: 12px;
+      padding-bottom: 44px;
+    }
   }
   /* .choice__title */
   &__title {
@@ -16,17 +25,40 @@
     font-size: 22px;
     line-height: 32px;
     color: @color-second;
-    padding: 0 5px;
-    margin: 0 0 5px;
+    margin: 0;
+
+    @media @screen-sm-only {
+      padding: 0 5px;
+      margin-bottom: 5px;     
+    }
+
+    @media (min-width: @screen-md) {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
   }
   /* .choice__form */
   &__form {
+
+    @media (min-width: @screen-md) {
+      display: flex;
+    }
   }
   /* .choice__list */
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0;
+
+    @media @screen-sm-only {
+      margin-right: 30px;
+    }
+
+    @media (min-width: @screen-md) {
+      display: flex;
+      margin-right: 42px;
+    }
   }
   /* .choice__item */
   &__item {
@@ -34,16 +66,41 @@
     flex-direction: column;
 
     &:not(:last-child) {
-      margin-bottom: 5px;      
+      @media @screen-sm-only {
+        margin-bottom: 5px;        
+      }
+
+      @media (min-width: @screen-md) {
+        margin-right: 20px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      width: 160px;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: @screen-md) {
+        width: 74px;        
+      }
     }
 
     label {
-      align-self: center;
       font-family: "IntroScript", "Comic Sans MS", sans-serif;
       font-size: 20px;
       line-height: 30px;
-      margin-bottom: 5px;
       color: @color-main;
+
+      @media @screen-sm-only {
+        align-self: center;
+        margin-bottom: 5px;        
+      }
+
+      @media (min-width: @screen-md) {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
     }
 
     input {
@@ -52,6 +109,13 @@
       text-align: center;
       padding: 5px 15px;
       color: @color-second;
+
+      @media (min-width: @screen-md) {
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 7px;
+        padding-bottom: 6px;
+      }
     }
   }
   /* .choice__button */
@@ -59,5 +123,12 @@
     .button();
 
     width: 226px;
+
+    @media (min-width: @screen-md) {
+      font-size: 10px;
+      line-height: 13px;
+      padding: 15px 10px;
+      align-self: flex-end;
+    }
   }
 }

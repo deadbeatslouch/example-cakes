@@ -3,26 +3,79 @@
   /* .step__wrapper */
   &__wrapper {
     position: relative;
-    width: 280px;
     margin: 0 auto;
-    padding: 5px 20px 26px;
+
+    @media @screen-sm-only {
+      width: 280px;
+      padding: 5px 20px 26px;
+    }
+
+    @media (min-width: @screen-md) {
+      display: flex;
+      width: 676px;
+      padding: 32px 20px 56px;
+    }
+    /* step__wrapper--fillingout */
+    &--fillingout {
+      @media (min-width: @screen-md) {
+        padding-top: 40px;
+        padding-bottom: 25px;
+      }      
+    }
+  }
+  /* step--fillingout */
+  &--fillingout {
+    @media (min-width: @screen-md) {
+      background-image: url("/img/fillingout-decor-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 18px 126px;
+      background-size: 119px 157px;
+    }    
   }
   /* .step__title */
   &__title {
     font-family: "PlayfairDisplay", sans-serif;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 32px;
     color: @color-main;
-    margin: 0 0 10px;
 
+    @media @screen-sm-only {
+      font-size: 16px;
+      line-height: 32px;
+      margin: 0 0 10px;      
+    }
+
+    @media (min-width: @screen-md) {
+      font-size: 18px;
+      line-height: 19px;
+      width: 110px;
+      margin: 0;
+    }
+    /* step__title--size*/
+    &--size {
+      @media (min-width: @screen-md) {
+        position: absolute;
+      }
+    }
+    /* step__title--fillingout*/
     &--fillingout {
-      margin-bottom: 32px;
+      @media @screen-sm-only {
+        margin-bottom: 32px;        
+      }
+
+      @media (min-width: @screen-md) {
+        width: 132px;
+        margin-right: 40px;
+      }
     }
   }
   /* .step__capital */
   &__capital {
     font-size: 30px;
+
+    @media (min-width: @screen-md) {
+      font-size: 36px;
+      line-height: 40px;
+    }
   }
   /* .step__list */
   &__list {
@@ -30,16 +83,71 @@
     padding: 0;
     margin: 0 0 20px;
 
+    @media (min-width: @screen-md) {
+      width: 460px;
+      margin: 0;
+    }
+    /* step__list--size */
     &--size {      
       margin: 0 0 29px;
+
+      @media (min-width: @screen-md) {
+        display: flex;
+        align-items: flex-end;
+        padding-left: 20px;
+        margin: 0;
+      }
+    }
+    /* step__list--fillingout */ 
+    &--fillingout {
+      @media (min-width: @screen-md) {
+        display: flex;
+      }
     }
   }
   /* .step__item */
   &__item {
-    display: none;
-
+    display: none;    
+    /* step__item--show */
     &--show {
       display: block;
+    }
+    /* step__item--filling */
+    &--filling {
+      @media (min-width: @screen-md) {
+        display: flex;
+        padding-top: 21px;        
+      }
+    }
+    /* step__item--size */
+    &--size {
+      @media (min-width: @screen-md) {
+        display: block;
+        padding-top: 44px;
+      }
+      &:last-child {
+        @media (min-width: @screen-md) {
+          margin-left: 50px;
+        }
+      }
+    }
+    /* step__item--fillingout */
+    &--fillingout {
+      @media (min-width: @screen-md) {
+        display: block;
+        padding-bottom: 17px;
+        box-shadow: 0px 7px 13px fade(@black, 5%);
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+
+        &:hover,
+        &:focus {
+          box-shadow: 0px 6px 10px fade(@black, 14%);
+        }
+      }
     }
   }
   /* .step__image */
@@ -52,14 +160,39 @@
       width: 240px;
       height: 113px;
       object-fit: cover;
+
+      @media (min-width: @screen-md) {
+        width: 210px;
+        height: 239px;
+        object-fit: cover;
+      }
+    }
+    /* step__image--filling */
+    &--filling {
+      @media (min-width: @screen-md) {
+      width: 210px;
+      height: 239px;
+      margin: 0 25px 0 0;
+      }
     }
     /* .step__image--size */
     &--size {
       height: 202px;
 
+      @media (min-width: @screen-md) {
+        width: 140px;
+        height: 140px;
+      }
+
       img {
         height: 202px;
         object-fit: none;
+
+        @media (min-width: @screen-md) {
+          width: 140px;
+          height: 140px;
+          object-position: bottom left;
+        }
       }
     }
     /* .step__image--fillingout */
@@ -67,11 +200,31 @@
       width: 169px;
       height: 196px;
       box-shadow: 0px 2px 5px fade(@color-main--dark, 10%);
+      
+      @media (min-width: @screen-md) {
+        width: 195px;
+        height: 210px;
+        box-shadow: none;
+        margin-bottom: 0;
+      }
 
       img {
         width: 169px;
         height: 196px;
+
+        @media (min-width: @screen-md) {
+          width: 195px;
+          height: 210px;
+          object-position: top;
+        }
       }
+    }
+  }
+  /* .step__info */
+  &__info {
+    @media (min-width: @screen-md) {
+      width: 190px;
+      padding-top: 23px;
     }
   }
   /* .step__name */
@@ -80,21 +233,36 @@
     font-size: 16px;
     color: @gray--darken;
     margin-bottom: 5px;
+
+    @media (min-width: @screen-md) {
+      font-size: 18px;
+    }
     /* .step__name--fillingout */
     &--fillingout {
       text-align: center;
       font-weight: normal;
       margin-bottom: 6px;
+
+      @media (min-width: @screen-md) {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
     }
   }
   /* .step__description */
   &__description {
     margin: 0 0 14px;
-    color: @gray--darken;
+    color: fade(@gray--darken, 80%);
 
     &--size {
       margin: 0;
       text-align: center;
+
+      @media (min-width: @screen-md) {
+        width: 140px;
+        text-align: left;
+        font-size: 12px;
+      }
     }
   }
   /* .step__price */
@@ -105,9 +273,42 @@
     font-weight: bold;
     color: @gray--darken;
     text-align: center;
+
+    @media (min-width: @screen-md) {
+      font-size: 20px;
+      text-align: left;
+    }
+    /* step__price--fillingout */
+    &--fillingout {
+      @media (min-width: @screen-md) {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
   }
   /* .step__button */
   &__button {
     .button();
+
+    @media (min-width: @screen-md) {
+      position: absolute;
+      bottom: 80px;
+      right: 176px;
+      font-size: 10px;
+      width: 135px;      
+      padding: 15px 26px 11px;
+    }
+    /* .step__button--size */
+    &--size {
+      @media (min-width: @screen-md) {
+        display: none;
+      }
+    }
+    /* step__button--fillingout */
+    &--fillingout {
+      @media (min-width: @screen-md) {
+        display: none;
+      }
+    }
   }
 }
