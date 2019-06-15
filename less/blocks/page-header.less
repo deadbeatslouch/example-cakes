@@ -8,25 +8,41 @@
     @media (min-width: @screen-md) {
       flex-direction: row;
     }
+
+    @media (min-width: @screen-lg) {
+      .container();
+
+      margin: 0 auto;
+    }
   }
   /* .page-header__logo */
   &__logo {
     font-family: "PlayfairDisplay", serif;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 32px;
-    
+    font-weight: bold;    
     background-color: @white;
-    padding: 4px 20px;
-    min-height: 40px;
 
-    @media (min-width: @screen-md) {
+    @media @screen-sm-only {
+      padding: 4px 20px;
+      min-height: 40px;
+      font-size: 16px;
+      line-height: 32px;      
+    }
+
+    @media @screen-md-only {
       flex-grow: 1;
       font-size: 20px;
       line-height: 22px;
 
       padding: 22px 46px 16px;
       min-height: 60px;
+    }
+
+    @media (min-width: @screen-lg) {
+      font-size: 23px;
+      line-height: 26px;
+      padding: 60px 25px 0 0;
+      background-color: transparent;
+      cursor: default;
     }
   }
   /* .page-header__phone */
@@ -47,6 +63,13 @@
       margin: 0;
       min-height: 60px;
       width: 177px;
+    }
+
+    @media (min-width: @screen-lg) {
+      background-color: transparent;
+      padding: 60px 0 0 22px;
+      margin-left: auto;
+      width: auto;
     }
   }
 }
