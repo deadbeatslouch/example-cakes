@@ -1,14 +1,32 @@
 .manual {
+    background-color: @color-main--bg;
+    color: @white;
+
+    @media @screen-sm-only {
+      background-image: url("/img/order-mobile.png");
+      background-repeat: no-repeat;
+      background-position: 50% 123%;     
+    }
+
+    @media (min-width: @screen-md) {
+      background-image: url("/img/order-tablet.png");
+      background-repeat: no-repeat;
+      background-position: -308px -22px;
+    }
   /* .manual__wrapper */
   &__wrapper {
     .container();
-    color: @white;
-    padding-top: 34px;
-    padding-bottom: 146px;
-    background-color: @color-main--bg;
-    background-image: url("/img/order-mobile.png");
-    background-repeat: no-repeat;
-    background-position: 50% 123%;
+
+    @media @screen-sm-only {
+      padding-top: 34px;
+      padding-bottom: 146px;
+    }
+
+    @media (min-width: @screen-md) {
+      width: 676px;
+      margin: 0 auto;
+      padding: 50px 20px 64px 282px;
+    }
   }
   /* .manual__title */
   &__title {
@@ -16,6 +34,10 @@
     
     margin-bottom: 30px;
     color: @white;
+
+    @media (min-width: @screen-md) {
+      text-align: left;
+    }
   }
   /* .manual__list */
   &__list {
@@ -37,11 +59,30 @@
       display: inline-block;
       text-align: center;
       float: left;
-      padding-left: 20px;
+
+      @media @screen-sm-only {
+        padding-left: 20px;
+      }
     }
 
     &:not(:last-child) {
       margin-bottom: 18px;
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 28px;
+      }
+    }
+
+    &:first-child {
+      @media (min-width: @screen-md) {
+        padding-right: 67px;        
+      }
+    }
+
+    &:last-child {
+      @media (min-width: @screen-md) {
+        padding-right: 132px;        
+      }
     }
   }
   /* .manual__caption */
@@ -50,10 +91,24 @@
     font-size: 15px;
     font-weight: bold;
     margin: 0 0 4px;
+
+    @media (min-width: @screen-md) {
+      padding-left: 40px;
+    }
   }
   /* .manual__text */
   &__text {
     padding-left: 47px;
     margin: 0;
+
+    @media (min-width: @screen-md) {
+      padding-left: 40px;
+    }
+
+    br {
+      @media @screen-sm-only {
+        display: none;
+      }
+    }
   }
 }

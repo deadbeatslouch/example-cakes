@@ -1,70 +1,129 @@
 .contacts {
-	/* .contacts__wrapper */
-	&__wrapper {
-		.container();
+  @media (min-width: @screen-md) {
+    background-image: url("/img/strawberry-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 314px 100%;
+  }
+  /* .contacts__wrapper */
+  &__wrapper {
+    .container();
 
-		padding-top: 40px;
-		padding-bottom: 50px;
-	}
-	/* .contacts__title */
-	&__title {
-		.title();
+    padding-top: 40px;
+    padding-bottom: 50px;
 
-		margin-bottom: 6px;
-	}
-	/* .contacts__form */
-	&__form {
-		margin-bottom: 28px;
-	}
-	/* .contacts__subtitle */
-	&__subtitle {
-		.subtitle();
+    @media (min-width: @screen-md) {
+      display: flex;
+      width: 728px;
+      margin: 0 auto;
+      padding: 45px 27px 110px;
+    }
+  }
+  /* contacts__form-wrapper */
+  &__form-wrapper {
+    @media (min-width: @screen-md) {
+      width: 346px;
+      margin-right: 66px;
+    }
+  }
+  /* .contacts__title */
+  &__title {
+    .title();
 
-		color: @color-second--intro;
-		text-align: left;
-		margin-bottom: 7px;
-	}
-	/* .contacts__description */
-	&__description {
-		margin: 0 0 7px;
-	}
-	/* .contacts__form-item */
-	&__form-item {
-		margin: 0 0 10px;
+    margin-bottom: 6px;
 
-		&:last-child {
-			margin-bottom: 20px;
-		}
-	}
-	/* .contacts__form-input */
-	&__form-input {
-		width: 100%;
-		border: none;
-		border-radius: 2px;
-		padding: 15px 10px;
+    @media (min-width: @screen-md) {
+      text-align: left;
+    }
+  }
+  /* .contacts__form */
+  &__form {
+    @media @screen-sm-only {
+      margin-bottom: 28px;      
+    }
+  }
+  /* .contacts__subtitle */
+  &__subtitle {
+    .subtitle();
 
-		&::-webkit-input-placeholder {
-			opacity: 0.2;
-		}
-		/* .contacts__form-input--area */
-		&--area {
-			margin-bottom: 0;
-		}
-	}
-	/* .contacts__button */
-	&__button {
-		.button();
-	}
-	/* .contacts__content-wrapper */
-	&__content-wrapper {
-	}
-	/* .contacts__item */
-	&__item {
-		&:not(:last-of-type) {
-			margin: 0 0 16px;
-		}
-		&:last-of-type {
-			margin: 0 0 10px;
-		}
-	}
+    color: @color-second--intro;
+    text-align: left;
+    margin-bottom: 7px;
+
+    @media (min-width: @screen-md) {
+      font-size: 22px;
+      line-height: 25px;
+      margin-bottom: 18px;
+    }
+  }
+  /* .contacts__description */
+  &__description {
+    margin: 0 0 7px;
+
+    @media (min-width: @screen-md) {
+      padding-right: 86px;
+      margin-bottom: 13px;
+    }
+  }
+  /* .contacts__form-item */
+  &__form-item {
+    margin: 0 0 10px;
+
+    &:nth-child(5) {
+      margin-bottom: 20px;
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  /* .contacts__form-input */
+  &__form-input {
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 10px;
+
+    &::-webkit-input-placeholder {
+      opacity: 0.2;
+    }
+    /* .contacts__form-input--area */
+    &--area {
+      min-height: 120px;
+      margin-bottom: 0;
+    }
+  }
+  /* .contacts__button */
+  &__button {
+    .button();
+
+    text-transform: none;
+    font-size: 19px;
+
+    @media (min-width: @screen-md) {
+      font-size: 14px;
+      margin: 0;
+      width: 160px;
+      padding: 15px 18px 11px;
+    }
+  }
+  /* .contacts__content-wrapper */
+  &__content-wrapper {
+    @media (min-width: @screen-md) {
+      width: 244px;
+      padding-top: 78px;
+    }
+  }
+  /* .contacts__item */
+  &__item {
+    &:not(:last-of-type) {
+      margin: 0 0 16px;
+    }
+    &:last-of-type {
+      margin: 0 0 10px;
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
