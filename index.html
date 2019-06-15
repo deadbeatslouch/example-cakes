@@ -435,7 +435,7 @@
           </li>
           <li class="manual__item">
             <h3 class="manual__caption">Доставка по городу </h3>
-            <p class="manual__text"> Доставка в пределах города 200 рубей , при заказе на сумму более 2000 доставка бесплатно.</p>
+            <p class="manual__text"> Доставка в пределах города 200 рубей ,<br> при заказе на сумму более 2000 доставка бесплатно.</p>
           </li>
           <li class="manual__item">
             <h3 class="manual__caption">Доставка за городом </h3>
@@ -447,24 +447,26 @@
 
     <section class="contacts" id="contacts">
       <div class="contacts__wrapper">
-        <h1 class="contacts__title">Контакты</h1>
-        <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="contacts__subtitle">Остались вопросы?</p>
-          <p class="contacts__description">Заполните форму ниже и наш кондитер свяжется с вами</p>
-          <p class="contacts__form-item">
-            <label for="form-name" class="visually-hidden"></label>
-            <input id="form-name" class="contacts__form-input" name="name" type="text" placeholder="Ваше имя">
-          </p>
-          <p class="contacts__form-item">
-            <label for="form-email" class="visually-hidden"></label>
-            <input id="form-email" class="contacts__form-input" name="email" type="text" placeholder="Email адрес">
-          </p>
-          <p class="contacts__form-item">
-            <label for="form-query" class="visually-hidden"></label>
-            <textarea id="form-query" class="contacts__form-input contacts__form-input--area" name="query" rows="6" placeholder="Ваш вопрос"></textarea>
-          </p>
-          <button class="contacts__button button" type="submit">Отправить </button>
-        </form>
+        <div class="contacts__form-wrapper">
+          <h1 class="contacts__title">Контакты</h1>
+          <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="contacts__subtitle">Остались вопросы?</p>
+            <p class="contacts__description">Заполните форму ниже и наш кондитер свяжется с вами</p>
+            <p class="contacts__form-item">
+              <label for="form-name" class="visually-hidden"></label>
+              <input id="form-name" class="contacts__form-input" name="name" type="text" placeholder="Ваше имя">
+            </p>
+            <p class="contacts__form-item">
+              <label for="form-email" class="visually-hidden"></label>
+              <input id="form-email" class="contacts__form-input" name="email" type="text" placeholder="Email адрес">
+            </p>
+            <p class="contacts__form-item">
+              <label for="form-query" class="visually-hidden"></label>
+              <textarea id="form-query" class="contacts__form-input contacts__form-input--area" name="query" rows="5" placeholder="Ваш вопрос"></textarea>
+            </p>
+            <button class="contacts__button button" type="submit">Отправить </button>
+          </form>
+        </div>
         <div class="contacts__content-wrapper">
           <p class="contacts__item">Или позвоните по телефону:<br>+7 906 899 92 96</p>
           <p class="contacts__item">Наша почта : bakerybypavel@mail.ru</p>
