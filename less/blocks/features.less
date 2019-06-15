@@ -1,79 +1,141 @@
 .features {
-	background-image: url(/img/cake-bottom-mobile.png);
-	background-repeat: no-repeat;
-	background-position: 50% 117%; 
-	/* .features__wrapper */
-	&__wrapper {
+  @media @screen-sm-only {
+    background-image: url(/img/cake-bottom-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 50% 117%;
+  }
 
-		padding-top: 45px;
-	}
-	/* .features__title */
-	&__title {
-		.title();
+  @media (min-width: @screen-md) {
+    background-image: url(/img/berry-tablet.png),
+                      url(/img/cake-bottom-tablet.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 73px, 102% 330px;
+  }
+  /* .features__wrapper */
+  &__wrapper {
 
-		margin-bottom: 5px;
+    padding-top: 45px;
 
-		&--care {
-			text-align: left;
-		}
-	}
-	/* .features__subtitle */
-	&__subtitle {
-		.subtitle();
-		
-		margin-bottom: 13px;
-		color: @color-second--intro;
+    @media (min-width: @screen-md) {
+      padding-top: 70px;
+      margin: 0 auto;
+      width: 676px;
+    }
+  }
+  /* .features__title */
+  &__title {
+    .title();
 
-		&--care {
-			text-align: left;
-			margin-bottom: 0;
-		}
-	}
-	/* .features__container */
-	&__container {
-		.container();
+    margin-bottom: 5px;
 
-		padding-top: 85px;
-		padding-bottom: 14px;
-		background-color: @white;
-		background-image: url("/img/icon-natural.svg"),
-											url("/img/icon-cake.png");
-		background-size: 61px 61px, 84px 50px;
-		background-repeat: no-repeat, no-repeat;
-		background-position: 50% 11px, 50% 153px;
-	}
-	/* .features__list */
-	&__list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	/* .features__item */
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 72px;
-		}
-	}
-	/* .features__text */
-	&__text {
-		text-align: center;
-		margin: 0;
+    &--care {
+      text-align: left;
+    }
+  }
+  /* .features__subtitle */
+  &__subtitle {
+    .subtitle();
+    
+    margin-bottom: 13px;
+    color: @color-second--intro;
 
-		&--care {
-			text-align: left;
-		}
-	}
-	/* .features__line */
-	&__line {
-		font-size: 16px;
-		line-height: 27px;
-		font-weight: bold;
-	}
-	/* .features__care-container */
-	&__care-container {
-		.container();
+    &--care {
+      text-align: left;
+      margin-bottom: 0;
 
-		padding-top: 38px;
-		padding-bottom: 170px;
-	}
+      @media (min-width: @screen-md) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  /* .features__container */
+  &__container {
+    .container();
+
+    background-image: url("/img/icon-natural.svg"),
+                      url("/img/icon-cake.png");
+    background-repeat: no-repeat, no-repeat;
+    
+    @media @screen-sm-only {
+      background-color: @white;
+      padding-top: 85px;
+      padding-bottom: 14px;
+      background-size: 61px 61px, 84px 50px;
+      background-position: 50% 11px, 50% 153px;   
+    }
+
+    @media (min-width: @screen-md) {
+      width: 395px;
+      padding: 0 20px 0 112px;
+      margin-left: auto;
+      margin-bottom: 206px;
+      background-size: 48px 48px, 63px 38px;
+      background-position: 41px 0, 32px 73px;
+    }
+  }
+  /* .features__list */
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* .features__item */
+  &__item {
+    
+    &:not(:last-child) {
+
+      @media @screen-sm-only {
+        margin-bottom: 72px;
+      }
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  /* .features__text */
+  &__text {
+    margin: 0;
+    
+    @media @screen-sm-only {
+      text-align: center;
+    }
+
+    &--care {
+      text-align: left;
+    }
+
+    br {
+      @media (min-width: @screen-md) {
+        display: none;
+      }
+    }
+  }
+  /* .features__line */
+  &__line {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: bold;
+
+    @media (min-width: @screen-md) {
+      display: block;
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 4px;
+    }
+  }
+  /* .features__care-container */
+  &__care-container {
+    .container();
+    
+    @media @screen-sm-only {
+      padding-top: 38px;
+      padding-bottom: 170px;      
+    }
+
+    @media (min-width: @screen-md) {
+      padding: 0 0 128px;
+      width: 320px;
+    }
+  }
 }

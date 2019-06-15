@@ -1,23 +1,49 @@
 .about-us {
-	/* .about-us__wrapper */
-	&__wrapper {
-		.container();
-		
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: 45px;
-	}
-	/* .about-us__title */
-	&__title {
-		.title();
-		
-		width: 100%;
-		margin-bottom: 25px;
-	}
-	/* .about-us__photo */
-	&__photo {
-		width: 155px;
-		height: 155px;
+  /* .about-us__wrapper */
+  &__wrapper {
+    .container();
+    
+    @media @screen-sm-only {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 45px;      
+    }
+
+    @media (min-width: @screen-md) {
+      display: grid;
+      grid-template-rows: 32px 248px 38px 199px;
+      grid-template-columns: 134px 180px 180px 134px;
+      grid-column-gap: 20px;
+      padding-top: 104px;
+      width: 728px;
+      margin: 0 auto;
+    }
+  }
+  /* .about-us__title */
+  &__title {
+    .title();
+    
+    @media @screen-sm-only {
+      width: 100%;
+      margin-bottom: 25px;  
+    }    
+
+    @media (min-width: @screen-md) {
+      width: 326px;
+      text-align: left;
+    }
+  }
+  /* .about-us__photo */
+  &__photo {
+    width: 155px;
+    height: 155px;
+
+    @media (min-width: @screen-md) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      width: 310px;
+      height: 310px;
+    }
 
     img {
       width: 155px;
@@ -25,64 +51,117 @@
       border-radius: 50%;
       object-fit: none;
       object-position: 34% 20%;
+
+      @media (min-width: @screen-md) {
+        width: 310px;
+        height: 310px;
+        object-position: 68%;
+      }
     }
-	}
-	/* .about-us__social */
-	&__social {
-		margin-left: 35px;
-	}
-	/* .about-us__content-wrapper */
-	&__content-wrapper {
-		padding-top: 15px;
-	}
-	/* .about-us__subtitle */
-	&__subtitle {
-		.subtitle();
+  }
+  /* .about-us__social */
+  &__social {
+    @media @screen-sm-only {
+      margin-left: 35px;  
+    }
 
-		margin-bottom: 7px;
-		color: @color-second--intro;
-		text-align: left;
-	}
-	/* .about-us__tag-line */
-	&__tag-line {
-		display: block;
-		margin-bottom: 8px;
-		font-weight: bold;
-		color: @color-second;
-	}
-	/* .about-us__text */
-	&__text {
-		margin: 0 0 12px;
-		color: @color-second;
+    @media (min-width: @screen-md) {
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-row-end: 4;
+      grid-column-end: 3;
+    }
+  }
+  /* .about-us__content-wrapper */
+  &__content-wrapper {
+    @media @screen-sm-only {
+      padding-top: 15px;
+    }
 
-		&:last-child {
-			margin: 0;
-		}
-	}
-	/* .about-us__quote */
-	&__quote {
-		padding-top: 68px;
-		margin: 0;
-		background-image: url("/img/icon-quotes.svg");
-		background-position: 50% 35px;
-		background-repeat: no-repeat;
-	}
-	/* .about-us__quote-text */
-	&__quote-text {
-		margin: 0 0 19px;
-		text-align: center;
-		font-family: "PlayfairDisplay", sans-serif;
-		font-style: italic;
-		font-weight: bold;
-		font-size: 14px;
-		line-height: 16px;
-		color: @color-second;
-	}
-	/* .about-us__sign */
-	&__sign {
-		img {
-	    margin: 0 auto;
-	    display: block;
-		}
-	}
+    @media (min-width: @screen-md) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: 326px;
+    }
+  }
+  /* .about-us__subtitle */
+  &__subtitle {
+    .subtitle();  
+    
+    color: @color-second--intro;
+    text-align: left;
+
+    @media @screen-sm-only {
+      margin-bottom: 7px;
+    }
+  }
+  /* .about-us__tag-line */
+  &__tag-line {
+    display: block;    
+    font-weight: bold;
+    color: @color-second;
+
+    @media @screen-sm-only {
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: @screen-md) {      
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+  /* .about-us__text */
+  &__text {
+    margin: 0;
+    color: @color-second;
+    
+    @media @screen-sm-only {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }    
+  }
+  /* .about-us__quote */
+  &__quote {
+    padding-top: 68px;
+    margin: 0;
+    background-image: url("/img/icon-quotes.svg");
+    background-position: 50% 35px;
+    background-repeat: no-repeat;
+
+    @media (min-width: @screen-md) {
+      grid-row-start: 4;
+      grid-column-start: 2;
+      grid-row-end: 5;
+      grid-column-end: 4;
+      padding-top: 76px;
+    }
+  }
+  /* .about-us__quote-text */
+  &__quote-text {
+    margin: 0 0 19px;
+    text-align: center;
+    font-family: "PlayfairDisplay", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: @color-second;
+
+    @media (min-width: @screen-md) {
+      line-height: 21px;
+    }
+  }
+  /* .about-us__sign */
+  &__sign {
+    img {
+      margin: 0 auto;
+      display: block;
+
+      @media (min-width: @screen-md) {
+        width: 82px;
+        height: 40px;
+      }
+    }
+  }
 }
