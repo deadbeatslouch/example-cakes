@@ -363,16 +363,24 @@
         <h2 class="about-us__title">О нас</h2>
         <div class="about-us__photo">
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/pastryman-tablet.webp">
             <source type="image/webp" srcset="img/pastryman-mobile.webp">
             
+            <source media="(min-width: 768px)" srcset="img/pastryman-tablet.jpg">
             <img src="img/pastryman-mobile.jpg" width="217" height="164" alt="Фото кондитера Павла">
           </picture>
         </div>
         <div class="about-us__social social">
           <ul class="social__list">
-            <li class="social__item social__item--instagram"><a href="#" class="social__button"><span class="visually-hidden">Мы в Instagram</span></a></li>
-            <li class="social__item social__item--vkontakte"><a href="#" class="social__button"><span class="visually-hidden">Мы в Vkontakte</span></a></li>
-            <li class="social__item social__item--twitter"><a href="#" class="social__button"><span class="visually-hidden">Мы в Twitter</span></a></li>
+            <li class="social__item">
+              <a href="#" class="social__button social__button--instagram"><span class="visually-hidden">Мы в Instagram</span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__button social__button--vkontakte"><span class="visually-hidden">Мы в Vkontakte</span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__button social__button--twitter"><span class="visually-hidden">Мы в Twitter</span></a>
+            </li>
           </ul>
         </div>
         <div class="about-us__content-wrapper">
@@ -385,8 +393,10 @@
         <blockquote class="about-us__quote">
           <p class="about-us__quote-text">Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное блюдо.</p>
           <picture class="about-us__sign">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/sign-tablet.webp">
             <source type="image/webp" srcset="img/sign-mobile.webp">
-
+            
+            <source media="(min-width: 768px)" srcset="img/sign-tablet.png">
             <img src="img/sign-mobile.png" width="64" height="31" alt="Подпись Павла">
           </picture>
         </blockquote>      
@@ -410,7 +420,7 @@
         <div class="features__care-container">
           <h3 class="features__title features__title--care">Забота о клиентах</h3>
           <p class="features__subtitle features__subtitle--care">Для нас важно</p>
-          <p class="features__text features__text">Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был cоздан исключительно для вас и для вашего события.</p>
+          <p class="features__text features__text--care">Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был cоздан исключительно для вас и для вашего события.</p>
         </div>
       </div>
     </section>
@@ -461,14 +471,14 @@
           <p class="contacts__item">Мы в соц. сетях:</p>
           <div class="social">
             <ul class="social__list social__list--contacts">
-              <li class="social__item social__item--contacts social__item--instagram">
-                <a href="#" class="social__button social__button--contacts"><span class="visually-hidden">Мы в Instagram</span></a>
+              <li class="social__item">
+                <a href="#" class="social__button social__button--contacts social__button--instagram"><span class="visually-hidden">Мы в Instagram</span></a>
               </li>
-              <li class="social__item social__item--contacts social__item--vkontakte">
-                <a href="#" class="social__button social__button--contacts"><span class="visually-hidden">Мы в Vkontakte</span></a>
+              <li class="social__item">
+                <a href="#" class="social__button social__button--contacts social__button--vkontakte"><span class="visually-hidden">Мы в Vkontakte</span></a>
               </li>
-              <li class="social__item social__item--contacts social__item--twitter">
-                <a href="#" class="social__button social__button--contacts"><span class="visually-hidden">Мы в Twitter</span></a>
+              <li class="social__item">
+                <a href="#" class="social__button social__button--contacts social__button--twitter"><span class="visually-hidden">Мы в Twitter</span></a>
               </li>
             </ul>
           </div>
