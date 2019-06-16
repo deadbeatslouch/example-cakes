@@ -7,10 +7,12 @@
       padding-top: 25px;
       padding-bottom: 25px;      
     }
-
-    @media (min-width: @screen-md) {
+    @media @screen-md-only {
       padding-top: 145px;
       padding-bottom: 25px;
+    }
+    @media (min-width: @screen-lg) {
+      margin:-50px auto 0;
     }
   }
   /* .products__title */
@@ -20,10 +22,12 @@
     @media @screen-sm-only {
       margin-bottom: 30px;      
     }
-
     @media (min-width: @screen-md) {
       text-align: left;
       margin-bottom: 36px;
+    }
+    @media (min-width: @screen-lg) {
+      margin-bottom: 60px;
     }
   }
   /* .products__list */
@@ -40,6 +44,11 @@
       grid-template-columns: 40% 1fr 40%;
       grid-gap: 20px;
     }
+    @media (min-width: @screen-lg) {
+      grid-template-rows: repeat(4, 304px);
+      grid-template-columns: 484px 172px 484px;
+      grid-gap: 40px;
+    }
   }
   /* .products__item */
   &__item {
@@ -49,29 +58,31 @@
     @media @screen-sm-only {
       height: 120px;
     }
-
     @media (min-width: @screen-md) {      
       box-shadow: 0px 10px 13px fade(@color-main--dark, 5%);
+    }
 
-      &:hover,
-      &:focus {
+    &:hover,
+    &:focus {
+      @media (min-width: @screen-md) {
         box-shadow: 0px 10px 13px fade(@color-main--dark, 12%);
-      }
+      }      
     }
     /* .products__item--classic */
     &--classic {
-
       @media (min-width: @screen-md) {
         grid-row-start: 1;
         grid-column-start: 1;
         grid-row-end: 3;
         grid-column-end: 3;
-
-        img {
-          width: 420px;
-          height: 390px;
-        }
       }
+
+      img {
+        @media (min-width: @screen-md) {
+          width: 420px;
+          height: 390px;          
+        }
+      }      
     }
     /* .products__item--mousse */
     &--mousse {
@@ -102,17 +113,29 @@
     position: absolute;
     top: 12px;
     left: 13px;
-
     color: @color-second;
+
+    @media (min-width: @screen-lg) {
+      top: 36px;
+      left: 46px;
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
   /* .products__number */
   &__number {
     position: absolute;
     top: 30px;
     left: 13px;
-
     font-size: 12px;
     color: fade(@color-second, 70%);
+
+    @media (min-width: @screen-lg) {
+      top: 61px;
+      left: 46px;
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
   /* .products__link */
   &__link {
@@ -121,31 +144,62 @@
 
     @media @screen-sm-only {  
       width: 280px; 
+    }
+    @media (min-width: @screen-md) {
+      width: 290px;
+    }
+    @media (min-width: @screen-lg) {
+      width: 480px;
+    }
 
-      &:hover,
-      &:focus {
+    &:hover,
+    &:focus {
+      @media @screen-sm-only {
         opacity: 0.4;
-        outline: none;
-      }
-
-      &:active {
-        opacity: 0.2;
-      }
-
-      img {
-        width: 280px;
-        height: 120px;
-        object-fit: cover;
+        outline: none;        
       }
     }
 
-    @media (min-width: @screen-md) {
-      width: 290px;
+    &:active {
+      @media @screen-sm-only {        
+        opacity: 0.2;
+      }
+    }
 
-      img {
+    &::after {
+      @media (min-width: @screen-lg) {
+        content: "";
+        position: absolute;
+        bottom: 39px;
+        right: 70px;
+        width: 17px;
+        height: 12px;
+        background-image: url("/img/icon-right-arrow.svg");
+        // background-size: 12px 17px;
+        background-repeat: no-repeat;        
+      }
+    }
+
+    &:hover::after {
+      @media (min-width: @screen-lg) {
+        background-image: url("/img/icon-right-arrow-hover.svg");
+      }
+    }
+
+    img {
+      @media @screen-sm-only {
+        width: 280px;
+        height: 120px;
+        object-fit: cover;        
+      }
+      @media (min-width: @screen-md) {
         width: 290px;
         height: 185px;
-        object-fit: cover;
+        object-fit: cover;        
+      }
+      @media (min-width: @screen-lg) {
+        width: 480px;
+        height: 304px;        
       }
     }
 
@@ -153,11 +207,20 @@
     &--big {
       @media (min-width: @screen-md) {
         width: 420px;
+      }      
+      @media (min-width: @screen-lg) {
+        width: 696px;
+      }
 
-        img {
+      img {
+        @media (min-width: @screen-md) {
           width: 420px;
           height: 390px;
-          object-fit: cover;
+          object-fit: cover;          
+        }
+        @media (min-width: @screen-lg) {
+          width: 696px;
+          height: 652px;
         }
       }
     }
@@ -169,5 +232,12 @@
     right: 72px;
     font-size: 12px;
     color: @color-second;
+
+    @media (min-width: @screen-lg) {
+      font-size: 20px;
+      line-height: 30px;
+      bottom: 30px;
+      right: 112px;
+    }
   }
 }
