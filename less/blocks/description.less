@@ -1,11 +1,20 @@
 .description {
-  background-image: url("/img/cake-top-mobile.png");
-  background-position: center -60px;
-  background-repeat: no-repeat;
-
-  @media (min-width: @screen-md) {
+  @media @screen-sm-only {
+    background-image: url("/img/cake-top-mobile.png");
+    background-position: center -60px;
+    background-repeat: no-repeat;    
+  }
+  @media @screen-md-only {
     background-image: url("/img/cake-top-tablet.png");
     background-position: 272px 13px;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: @screen-lg) {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-image: url("/img/cake-top-desktop.png");
+    background-position: 330px 22px;;
+    background-repeat: no-repeat;
   }
   /* .description__wrapper */
   &__wrapper {
@@ -19,6 +28,10 @@
       flex-direction: column;
       padding: 104px 46px 0;
     }
+    @media (min-width: @screen-lg) {
+      margin: 0 auto;
+      padding: 150px 63px 302px;
+    }
   }
   /* .description__title */
   &__title {
@@ -30,13 +43,19 @@
       padding: 0 15%;
       margin-bottom: 15px;      
     }
-
     @media @screen-md-only {
       font-size: 55px;
       line-height: 60px;
       text-align: left;
       width: 250px;
       margin-bottom: 11px;
+    }
+    @media (min-width: @screen-lg) {
+      font-size: 78px;
+      line-height: 86px;
+      text-align: left;
+      width: 369px;
+      margin-bottom: 7px;
     }
   }
   /* .description__subtitle */
@@ -46,12 +65,18 @@
     @media @screen-sm-only {
       margin-bottom: 20px;      
     }
-
     @media @screen-md-only {
       text-align: left;
       font-size: 36px;
       line-height: 40px;
       margin-bottom: 54px;
+    }
+    @media (min-width: @screen-lg) {
+      text-align: left;
+      font-size: 40px;
+      line-height: 46px;
+      margin-bottom: 58px;
+      width: 369px;
     }
   }
   /* .description__list */
@@ -77,6 +102,12 @@
 
     @media (min-width: @screen-md) {
       padding: 17px 15px 5px 64px;
+    }
+
+    br {
+      @media @screen-sm-only {
+        display: none;
+      }
     }
     /* .description__item--natural */
     &--natural {
@@ -115,6 +146,9 @@
 
     @media (min-width: @screen-md) {
       margin: 0 0 147px;
+    }
+    @media (min-width: @screen-lg) {
+      margin-bottom: 128px;
     }
   }
 }
