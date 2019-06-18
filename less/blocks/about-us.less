@@ -18,6 +18,13 @@
       width: 728px;
       margin: 0 auto;
     }
+
+    @media (min-width: @screen-lg) {
+      grid-template-rows: 67px 329px 113px 414px;
+      grid-template-columns: 254px 327px 327px 254px;
+      width: 1220px;
+      padding: 141px 0 0;
+    }
   }
   /* .about-us__title */
   &__title {
@@ -29,8 +36,12 @@
     }    
 
     @media (min-width: @screen-md) {
-      width: 326px;
       text-align: left;
+    }
+
+    @media (min-width: @screen-lg) {
+      display: block;
+      padding-top: 22px;
     }
   }
   /* .about-us__photo */
@@ -41,8 +52,15 @@
     @media (min-width: @screen-md) {
       grid-column-start: 3;
       grid-column-end: 5;
-      width: 310px;
+      width: 325px;
       height: 310px;
+      padding-left: 15px;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 528px;
+      height: 508px;
+      padding-left: 20px;
     }
 
     img {
@@ -56,6 +74,11 @@
         width: 310px;
         height: 310px;
         object-position: 68%;
+      }
+
+      @media (min-width: @screen-lg) {
+        width: 508px;
+        height: 508px;
       }
     }
   }
@@ -81,7 +104,10 @@
     @media (min-width: @screen-md) {
       grid-column-start: 1;
       grid-column-end: 3;
-      width: 326px;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding-right: 45px;
     }
   }
   /* .about-us__subtitle */
@@ -93,6 +119,11 @@
 
     @media @screen-sm-only {
       margin-bottom: 7px;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding-top: 19px;
+      margin-bottom: 6px;
     }
   }
   /* .about-us__tag-line */
@@ -108,38 +139,73 @@
     @media (min-width: @screen-md) {      
       font-size: 15px;
       line-height: 19px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: @screen-lg) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 4px;
     }
   }
   /* .about-us__text */
   &__text {
     margin: 0;
-    color: @color-second;
+    color: @color-second;    
+
+    @media (min-width: @screen-lg) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     
-    @media @screen-sm-only {
-      &:not(:last-child) {
-        margin-bottom: 12px;
+    &:not(:last-child) {
+      @media @screen-sm-only {
+        margin-bottom: 12px;        
       }
-    }    
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: @screen-lg) {
+        margin-bottom: 19px;
+      }
+    }
   }
   /* .about-us__quote */
   &__quote {
-    padding-top: 68px;
+    padding: 68px 0 50px;
     margin: 0;
-    background-image: url("/img/icon-quotes.svg");
-    background-position: 50% 35px;
-    background-repeat: no-repeat;
+    background-image: url("/img/icon-quotes.svg"),
+                      url("/img/sign-mobile.png");
+    background-position: center 35px, center bottom;
+    background-repeat: no-repeat, no-repeat;
 
     @media (min-width: @screen-md) {
       grid-row-start: 4;
       grid-column-start: 2;
       grid-row-end: 5;
       grid-column-end: 4;
-      padding-top: 76px;
+      padding: 76px 0 66px;
+      background-image: url("/img/icon-quotes.svg"),
+                        url("/img/sign-tablet.png");
+      background-position: center 0, center bottom;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 38px 84px, 82px 40px;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding-top: 190px;
+      background-image: url("/img/icon-quotes.svg"),
+                        url("/img/sign-desktop.png");
+      background-position: center 0, center bottom;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 68px 164px, 148px 73px;
     }
   }
   /* .about-us__quote-text */
   &__quote-text {
-    margin: 0 0 19px;
+    margin: 0;
     text-align: center;
     font-family: "PlayfairDisplay", sans-serif;
     font-style: italic;
@@ -151,17 +217,10 @@
     @media (min-width: @screen-md) {
       line-height: 21px;
     }
-  }
-  /* .about-us__sign */
-  &__sign {
-    img {
-      margin: 0 auto;
-      display: block;
 
-      @media (min-width: @screen-md) {
-        width: 82px;
-        height: 40px;
-      }
+    @media (min-width: @screen-lg) {
+      font-size: 25px;
+      line-height: 38px;
     }
   }
 }
