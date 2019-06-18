@@ -11,6 +11,10 @@
     line-height: 15px;
     color: fade(@color-second, 70%);
   }
+
+  @media (min-width: @screen-lg) {
+    font-size: 18px;
+  }
   /* .number--filling */
   &--filling {
 
@@ -22,6 +26,11 @@
     @media (min-width: @screen-md) {
       bottom: 55px;
       right: 45px;
+    }
+
+    @media (min-width: @screen-lg) {
+      bottom: 90px;
+      right: 100px;
     }
   }
   /* .number--fillingout */
@@ -37,6 +46,12 @@
       right: 6px;
       bottom: 20px;
       font-size: 12px;
+    }
+
+    @media (min-width: @screen-lg) {
+      right: 48px;
+      bottom: 18px;
+      font-size: 18px;
     }
   }
   /* .number--reviews */
