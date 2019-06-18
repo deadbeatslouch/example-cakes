@@ -66,7 +66,7 @@
       background-position: 56% 50%;
       right: 25px;
 
-      @media (min-width: @screen-lg)  {
+      @media (min-width: @screen-lg) {
         right: 90px;
       }
     }
@@ -74,12 +74,24 @@
     &--reviews {
       top: 147px;
 
+      @media (min-width: @screen-lg) {
+        top: 300px;
+      }
+
       &.navigation__item--prev {
         left: 43px;
+
+        @media (min-width: @screen-lg) {
+          left: 20px;
+        }
       }
 
       &.navigation__item--next {
         right: 45px;
+
+        @media (min-width: @screen-lg) {
+          right: 30px;
+        }
       }
     }
   }
