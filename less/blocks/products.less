@@ -7,10 +7,12 @@
       padding-top: 25px;
       padding-bottom: 25px;      
     }
+
     @media @screen-md-only {
       padding-top: 145px;
       padding-bottom: 25px;
     }
+
     @media (min-width: @screen-lg) {
       margin:-50px auto 0;
     }
@@ -22,10 +24,12 @@
     @media @screen-sm-only {
       margin-bottom: 30px;      
     }
+
     @media (min-width: @screen-md) {
       text-align: left;
       margin-bottom: 36px;
     }
+
     @media (min-width: @screen-lg) {
       margin-bottom: 60px;
     }
@@ -44,6 +48,7 @@
       grid-template-columns: 40% 1fr 40%;
       grid-gap: 20px;
     }
+
     @media (min-width: @screen-lg) {
       grid-template-rows: repeat(4, 304px);
       grid-template-columns: 484px 172px 484px;
@@ -58,6 +63,7 @@
     @media @screen-sm-only {
       height: 120px;
     }
+
     @media (min-width: @screen-md) {      
       box-shadow: 0px 10px 13px fade(@color-main--dark, 5%);
     }
@@ -75,14 +81,7 @@
         grid-column-start: 1;
         grid-row-end: 3;
         grid-column-end: 3;
-      }
-
-      img {
-        @media (min-width: @screen-md) {
-          width: 420px;
-          height: 390px;          
-        }
-      }      
+      }    
     }
     /* .products__item--mousse */
     &--mousse {
@@ -145,9 +144,11 @@
     @media @screen-sm-only {  
       width: 280px; 
     }
+
     @media (min-width: @screen-md) {
       width: 290px;
     }
+
     @media (min-width: @screen-lg) {
       width: 480px;
     }
@@ -175,7 +176,6 @@
         width: 17px;
         height: 12px;
         background-image: url("/img/icon-right-arrow.svg");
-        // background-size: 12px 17px;
         background-repeat: no-repeat;        
       }
     }
@@ -192,11 +192,13 @@
         height: 120px;
         object-fit: cover;        
       }
+
       @media (min-width: @screen-md) {
         width: 290px;
         height: 185px;
         object-fit: cover;        
       }
+
       @media (min-width: @screen-lg) {
         width: 480px;
         height: 304px;        
@@ -207,10 +209,11 @@
     &--big {
       @media (min-width: @screen-md) {
         width: 420px;
-      }      
+      }   
+
       @media (min-width: @screen-lg) {
         width: 696px;
-      }
+      }      
 
       img {
         @media (min-width: @screen-md) {
@@ -218,9 +221,10 @@
           height: 390px;
           object-fit: cover;          
         }
+
         @media (min-width: @screen-lg) {
           width: 696px;
-          height: 652px;
+          height: 649px;
         }
       }
     }
