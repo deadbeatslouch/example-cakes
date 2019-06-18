@@ -5,21 +5,34 @@
     background-position: 50% 117%;
   }
 
-  @media (min-width: @screen-md) {
+  @media @screen-md-only {
     background-image: url(/img/berry-tablet.png),
                       url(/img/cake-bottom-tablet.png);
     background-repeat: no-repeat, no-repeat;
     background-position: 0 73px, 102% 330px;
   }
+
+  @media (min-width: @screen-lg) {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-image: url(/img/berry-desktop.png),
+                      url(/img/cake-bottom-desktop.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -9px 115px, 582px 630px;
+  }
   /* .features__wrapper */
   &__wrapper {
-
     padding-top: 45px;
 
     @media (min-width: @screen-md) {
       padding-top: 70px;
       margin: 0 auto;
       width: 676px;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 1220px;
+      padding-top: 136px;
     }
   }
   /* .features__title */
@@ -28,8 +41,16 @@
 
     margin-bottom: 5px;
 
+    @media (min-width: @screen-lg) {
+      margin-bottom: 24px;
+    }
+    /* features__title--care */
     &--care {
       text-align: left;
+
+      @media (min-width: @screen-lg) {
+        margin-bottom: 15px;
+      }
     }
   }
   /* .features__subtitle */
@@ -39,12 +60,20 @@
     margin-bottom: 13px;
     color: @color-second--intro;
 
+    @media (min-width: @screen-lg) {
+      margin-bottom: 130px;
+    }
+    /* features__subtitle--care */
     &--care {
       text-align: left;
       margin-bottom: 0;
 
       @media (min-width: @screen-md) {
         margin-bottom: 6px;
+      }
+
+      @media (min-width: @screen-lg) {
+        margin-bottom: 9px;
       }
     }
   }
@@ -72,6 +101,15 @@
       background-size: 48px 48px, 63px 38px;
       background-position: 41px 0, 32px 73px;
     }
+
+    @media (min-width: @screen-lg) {
+      width: 714px;
+      padding-left: 123px;
+      padding-right: 216px;
+      margin-bottom: 408px;
+      background-size: 61px 61px, 84px 50px;
+      background-position: 40px 10px, 29px 120px;
+    }
   }
   /* .features__list */
   &__list {
@@ -80,16 +118,19 @@
     margin: 0;
   }
   /* .features__item */
-  &__item {
-    
+  &__item {    
     &:not(:last-child) {
 
       @media @screen-sm-only {
         margin-bottom: 72px;
       }
 
-      @media (min-width: @screen-md) {
+      @media @screen-md-only {
         margin-bottom: 12px;
+      }
+
+      @media (min-width: @screen-lg) {
+        margin-bottom: 35px;
       }
     }
   }
@@ -101,6 +142,11 @@
       text-align: center;
     }
 
+    @media (min-width: @screen-lg) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    /* features__text--care */
     &--care {
       text-align: left;
     }
@@ -123,6 +169,12 @@
       line-height: 20px;
       margin-bottom: 4px;
     }
+
+    @media (min-width: @screen-lg) {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 2px;
+    }
   }
   /* .features__care-container */
   &__care-container {
@@ -136,6 +188,11 @@
     @media (min-width: @screen-md) {
       padding: 0 0 128px;
       width: 320px;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 440px;
+      padding-bottom: 254px;
     }
   }
 }
