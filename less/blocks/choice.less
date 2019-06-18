@@ -17,6 +17,11 @@
       padding-top: 12px;
       padding-bottom: 44px;
     }
+
+    @media (min-width: @screen-lg) {
+      width: 1136px;
+      padding: 36px 50px 70px 30px;
+    }
   }
   /* .choice__title */
   &__title {
@@ -36,6 +41,12 @@
       font-size: 18px;
       line-height: 20px;
       margin-bottom: 10px;
+    }
+
+    @media (min-width: @screen-lg) {
+      font-size: 27px;
+      line-height: 30px;
+      margin-bottom: 20px;
     }
   }
   /* .choice__form */
@@ -59,6 +70,10 @@
       display: flex;
       margin-right: 42px;
     }
+
+    @media (min-width: @screen-lg) {
+      margin-right: 25px;
+    }
   }
   /* .choice__item */
   &__item {
@@ -73,15 +88,27 @@
       @media (min-width: @screen-md) {
         margin-right: 20px;
       }
+
+      @media (min-width: @screen-lg) {
+        margin-right: 84px;
+      }
     }
 
     @media (min-width: @screen-md) {
       width: 160px;
     }
 
-    &:nth-child(2) {
+    @media (min-width: @screen-lg) {
+      width: 250px;
+    }
+
+    &:nth-child(2) {      
       @media (min-width: @screen-md) {
         width: 74px;        
+      }
+
+      @media (min-width: @screen-lg) {
+        width: 137px;
       }
     }
 
@@ -101,6 +128,12 @@
         line-height: 20px;
         margin-bottom: 8px;
       }
+
+      @media (min-width: @screen-lg) {
+        font-size: 27px;
+        line-height: 30px;
+        margin-bottom: 16px;
+      }
     }
 
     input {
@@ -116,6 +149,16 @@
         padding-top: 7px;
         padding-bottom: 6px;
       }
+
+      @media (min-width: @screen-lg) {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        padding: 0 0 6px 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid @color-second--light;
+      }
     }
   }
   /* .choice__button */
@@ -124,11 +167,16 @@
 
     width: 226px;
 
-    @media (min-width: @screen-md) {
+    @media @screen-md-only {
       font-size: 10px;
       line-height: 13px;
       padding: 15px 10px;
       align-self: flex-end;
+    }
+
+    @media (min-width: @screen-lg) {
+      align-self: flex-end;
+      min-width: 226px;     
     }
   }
 }
